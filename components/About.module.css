@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 44px;
+}
+
+.bio {
+  font-size: 16.5px;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.block {
+  border-left: 2px solid var(--line);
+  padding-left: 16px;
+}
+
+.blockLabel {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+
+.blockTitle {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.blockMeta {
+  font-size: 13.5px;
+  color: var(--ink-faint);
+  margin-top: 3px;
+}
+
+.badgeList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 60px;
+  }
+}

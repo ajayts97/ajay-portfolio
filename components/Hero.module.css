@@ -1,0 +1,227 @@
+.hero {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+}
+
+.h1 {
+  font-size: clamp(30px, 5.4vw, 50px);
+  line-height: 1.12;
+  font-weight: 600;
+  max-width: 15ch;
+}
+
+.sub {
+  margin-top: 22px;
+  max-width: 46ch;
+  color: var(--ink-soft);
+  font-size: 16.5px;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.primaryBtn {
+  background: var(--ink);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.secondaryBtn {
+  border: 1px solid var(--line-strong);
+  color: var(--ink);
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14.5px;
+  font-family: var(--font-mono);
+}
+
+.metaRow {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink-faint);
+  font-family: var(--font-mono);
+}
+
+.metaDivider {
+  color: var(--line-strong);
+}
+
+.metaLink {
+  color: var(--ink-faint);
+  text-decoration: none;
+}
+
+.metaLink:hover {
+  color: var(--accent-ink);
+}
+
+/* Device mockup */
+.deviceWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+
+.device {
+  width: 240px;
+  border-radius: 30px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 60px -30px rgba(16, 24, 38, 0.28);
+  overflow: hidden;
+}
+
+.statusBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink);
+}
+
+.statusIcons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.signal,
+.wifi {
+  width: 12px;
+  height: 8px;
+  background: var(--ink);
+  border-radius: 1px;
+  opacity: 0.8;
+}
+
+.battery {
+  width: 16px;
+  height: 8px;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.appHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-display);
+}
+
+.appDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.appBody {
+  padding: 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeletonHero {
+  height: 78px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent-tint), var(--bg-tint));
+}
+
+.skeletonRow {
+  display: flex;
+  gap: 8px;
+}
+
+.skeletonCard {
+  flex: 1;
+  height: 46px;
+  border-radius: 10px;
+  background: var(--bg-tint);
+}
+
+.skeletonLine {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-tint);
+}
+
+.skeletonButton {
+  margin-top: 6px;
+  height: 38px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabBar {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 16px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.tab,
+.tabActive {
+  width: 18px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bg-tint);
+}
+
+.tabActive {
+  background: var(--accent);
+  width: 22px;
+}
+
+.deviceCaption {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-faint);
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+  .deviceWrap {
+    justify-self: end;
+  }
+}

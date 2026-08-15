@@ -1,0 +1,130 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(246, 248, 251, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brandFaint {
+  color: var(--ink-faint);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 3px var(--success-tint);
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 28px;
+}
+
+.navLink {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: var(--ink);
+}
+
+.resumeBtn {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--accent-ink);
+  background: var(--accent-tint);
+  padding: 7px 12px;
+  border-radius: 6px;
+}
+
+.menuBtn {
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menuIcon {
+  position: relative;
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  transition: transform 0.2s ease;
+}
+
+.menuIcon::before {
+  top: 0;
+}
+
+.menuIcon::after {
+  bottom: 0;
+}
+
+.menuIcon[data-open="true"]::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menuIcon[data-open="true"]::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.mobileLink {
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+@media (min-width: 780px) {
+  .desktopNav {
+    display: flex;
+  }
+  .menuBtn {
+    display: none;
+  }
+}
