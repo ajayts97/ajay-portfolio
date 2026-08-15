@@ -37,7 +37,6 @@ export default function Contact() {
 
         <footer className={styles.footer}>
           <span>Ajay T S — Thrissur, Kerala</span>
-          <span>Built with Next.js</span>
         </footer>
       </div>
     </section>
