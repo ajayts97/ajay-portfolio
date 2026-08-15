@@ -1,15 +1,19 @@
 import styles from "./Contact.module.css";
+import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
     <section id="contact" className={styles.section}>
       <div className="wrap">
-        <div className="section-heading">
-          <span className="idx">04</span>
-          <h2>Contact</h2>
-        </div>
+        <Reveal>
+          <div className="section-heading">
+            <span className="idx">04</span>
+            <h2>Contact</h2>
+          </div>
+        </Reveal>
 
-        <div className={styles.panel}>
+        <Reveal>
+          <div className={styles.panel}>
           <p className={styles.command}>
             <span className={styles.prompt}>$</span> npx contact ajay
           </p>
@@ -33,7 +37,8 @@ export default function Contact() {
               github.com/ajayts97
             </a>
           </div>
-        </div>
+          </div>
+        </Reveal>
 
         <footer className={styles.footer}>
           <span>Ajay T S — Thrissur, Kerala</span>

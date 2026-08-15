@@ -1,16 +1,19 @@
 import styles from "./About.module.css";
+import Reveal from "./Reveal";
 
 export default function About() {
   return (
     <section id="about">
       <div className="wrap">
-        <div className="section-heading">
-          <span className="idx">03</span>
-          <h2>About</h2>
-        </div>
+        <Reveal>
+          <div className="section-heading">
+            <span className="idx">03</span>
+            <h2>About</h2>
+          </div>
+        </Reveal>
 
         <div className={styles.grid}>
-          <p className={styles.bio}>
+          <Reveal className={styles.bio} as="p">
             Five years in, Ajay's work sits at the point where an app stops
             being code on a laptop and becomes something a customer
             downloads. That means owning the parts most frontend roles
@@ -19,9 +22,9 @@ export default function About() {
             work that gets a product to that point. Recent focus has been
             fintech and insurance: admin consoles, KYC, and policy
             workflows that need to be both fast and exactly correct.
-          </p>
+          </Reveal>
 
-          <div className={styles.side}>
+          <Reveal className={styles.side} delay={120}>
             <div className={styles.block}>
               <p className={styles.blockLabel}>Education</p>
               <p className={styles.blockTitle}>
@@ -44,7 +47,7 @@ export default function About() {
                 </li>
               </ul>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

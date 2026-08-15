@@ -19,6 +19,12 @@
 .block {
   border-left: 2px solid var(--line);
   padding-left: 16px;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.block:hover {
+  border-left-color: var(--accent);
+  transform: translateX(4px);
 }
 
 .blockLabel {

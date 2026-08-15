@@ -44,13 +44,32 @@
 }
 
 .navLink {
+  position: relative;
   font-size: 14.5px;
   color: var(--ink-soft);
   text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1.5px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s var(--ease);
 }
 
 .navLink:hover {
   color: var(--ink);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
 }
 
 .resumeBtn {
@@ -61,6 +80,14 @@
   background: var(--accent-tint);
   padding: 7px 12px;
   border-radius: 6px;
+  transition:
+    transform 0.16s var(--ease),
+    box-shadow 0.16s var(--ease);
+}
+
+.resumeBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(18, 60, 148, 0.18);
 }
 
 .menuBtn {

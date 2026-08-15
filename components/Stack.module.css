@@ -9,7 +9,7 @@
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
 
 .card:hover {
@@ -41,4 +41,16 @@
   background: var(--bg-raised);
   border-radius: 999px;
   padding: 5px 11px;
+  transition:
+    transform 0.15s var(--ease),
+    border-color 0.15s var(--ease),
+    color 0.15s var(--ease),
+    background 0.15s var(--ease);
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  background: var(--accent-tint);
 }

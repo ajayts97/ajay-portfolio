@@ -1,4 +1,5 @@
 import styles from "./Changelog.module.css";
+import Reveal from "./Reveal";
 
 type Entry = {
   type: "feat" | "perf" | "chore" | "docs";
@@ -104,14 +105,16 @@ export default function Changelog() {
   return (
     <section id="log">
       <div className="wrap">
-        <div className="section-heading">
-          <span className="idx">01</span>
-          <h2>Release log</h2>
-        </div>
+        <Reveal>
+          <div className="section-heading">
+            <span className="idx">01</span>
+            <h2>Release log</h2>
+          </div>
+        </Reveal>
 
         <div className={styles.list}>
-          {RELEASES.map((r) => (
-            <article key={r.version} className={styles.release}>
+          {RELEASES.map((r, i) => (
+            <Reveal as="article" key={r.version} className={styles.release} delay={i * 90}>
               <div className={styles.rail}>
                 <span
                   className={
@@ -135,15 +138,15 @@ export default function Changelog() {
                 <p className={styles.location}>{r.location}</p>
 
                 <ul className={styles.entries}>
-                  {r.entries.map((e, i) => (
-                    <li key={i} className={styles.entry}>
+                  {r.entries.map((e, idx) => (
+                    <li key={idx} className={styles.entry}>
                       <span className={`tag tag--${e.type}`}>{e.type}</span>
                       <span>{e.text}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>

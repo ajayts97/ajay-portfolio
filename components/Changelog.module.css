@@ -28,6 +28,17 @@
 .dotCurrent {
   background: var(--success);
   box-shadow: 0 0 0 4px var(--success-tint);
+  animation: pulse 2.4s var(--ease) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px var(--success-tint);
+  }
+  50% {
+    box-shadow: 0 0 0 9px rgba(20, 138, 95, 0.12);
+  }
 }
 
 .railLine {

@@ -22,6 +22,7 @@
   --font-mono: var(--font-jetbrains-mono), "SFMono-Regular", Menlo, monospace;
 
   --container: 1080px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {

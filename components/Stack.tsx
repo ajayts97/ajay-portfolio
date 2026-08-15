@@ -1,4 +1,5 @@
 import styles from "./Stack.module.css";
+import Reveal from "./Reveal";
 
 const GROUPS: { label: string; items: string[] }[] = [
   {
@@ -51,14 +52,20 @@ export default function Stack() {
   return (
     <section id="stack">
       <div className="wrap">
-        <div className="section-heading">
-          <span className="idx">02</span>
-          <h2>Stack</h2>
-        </div>
+        <Reveal>
+          <div className="section-heading">
+            <span className="idx">02</span>
+            <h2>Stack</h2>
+          </div>
+        </Reveal>
 
         <div className={styles.grid}>
-          {GROUPS.map((group) => (
-            <div key={group.label} className={styles.card}>
+          {GROUPS.map((group, i) => (
+            <Reveal
+              key={group.label}
+              className={styles.card}
+              delay={i * 60}
+            >
               <h3>{group.label}</h3>
               <div className={styles.chips}>
                 {group.items.map((item) => (
@@ -67,7 +74,7 @@ export default function Stack() {
                   </span>
                 ))}
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
