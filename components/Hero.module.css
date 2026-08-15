@@ -19,7 +19,10 @@
   font-size: clamp(30px, 5.4vw, 50px);
   line-height: 1.12;
   font-weight: 600;
-  max-width: 15ch;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .sub {

@@ -10,8 +10,10 @@ export default function Hero() {
           </p>
           <h1 className={styles.h1}>
             Hi, I’m Ajay T S.
-            I build mobile apps that ship.
           </h1>
+            <h1 className={`${styles.h1} ${styles.nowrap}`}>
+            I build mobile apps that ship.
+            </h1>
           <p className={styles.sub}>
             Senior Frontend Engineer with 5 years taking React Native and
             React apps from first commit to production — KYC flows and
@@ -42,42 +44,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-
-        {/* <div className={styles.deviceWrap} aria-hidden="true">
-          <div className={styles.device}>
-            <div className={styles.statusBar}>
-              <span>9:41</span>
-              <div className={styles.statusIcons}>
-                <span className={styles.signal} />
-                <span className={styles.wifi} />
-                <span className={styles.battery} />
-              </div>
-            </div>
-            <div className={styles.appHeader}>
-              <span className={styles.appDot} />
-              Chola SuperApp
-            </div>
-            <div className={styles.appBody}>
-              <div className={styles.skeletonHero} />
-              <div className={styles.skeletonRow}>
-                <div className={styles.skeletonCard} />
-                <div className={styles.skeletonCard} />
-              </div>
-              <div className={styles.skeletonLine} style={{ width: "80%" }} />
-              <div className={styles.skeletonLine} style={{ width: "55%" }} />
-              <div className={styles.skeletonButton}>Renew policy</div>
-            </div>
-            <div className={styles.tabBar}>
-              <span className={styles.tabActive} />
-              <span className={styles.tab} />
-              <span className={styles.tab} />
-              <span className={styles.tab} />
-            </div>
-          </div>
-          <div className={styles.deviceCaption}>
-            AAB signed · TestFlight → App Store
-          </div>
-        </div> */}
       </div>
     </section>
   );
